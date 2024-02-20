@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
-  View,
+  UIView,
   Alert,
   Button,
   TouchableHighlight,
@@ -26,7 +26,7 @@ export default function App() {
     console.log(sameColor);
   };
   return (
-    <View style={styles.container}>
+    <UIView style={styles.container}>
       <StatusBar style="auto" />
       <TouchableHighlight
         activeOpacity={0.6}
@@ -43,7 +43,7 @@ export default function App() {
       >
         <Text style={styles.buttonText}>Change color</Text>
       </TouchableOpacity>
-    </View>
+    </UIView>
   );
 }
 
