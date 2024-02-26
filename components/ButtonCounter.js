@@ -1,39 +1,45 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 
 export default function ButtonCounter() {
-  const [buttonCounts, setButtonCounts] = useState(0);
-  const handleButton = () => {
-    setButtonCounts(buttonCounts + 1);
+  const [count, setCount] = useState(0);
+
+  const onPressButton = () => {
+    setCount(count + 1);
   };
+
   return (
     <View style={styles.container}>
-      <Button
-        title={`Click me\n ${buttonCounts}`}
-        onPress={handleButton}
-      ></Button>
+      <TouchableOpacity onPress={onPressButton}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>Press me!</Text>
+        </View>
+      </TouchableOpacity>
+      <Text style={styles.text}>Button pressed {count} times</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#028090",
-    margin: 15,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f9f5e3",
   },
   text: {
-    color: "#F0F3BD",
-    fontSize: 18,
-    margin: 15,
+    color: "#093A3E",
+    fontSize: 20,
+    margin: 20,
   },
   button: {
-    backgroundColor: "#02C39A",
-    padding: 10,
+    backgroundColor: "#62a87c",
+    padding: 20,
     borderRadius: 5,
   },
   buttonText: {
-    fontSize: 18,
-    color: "#F0F3BD",
+    color: "#f9f5e3",
+    fontSize: 20,
   },
 });
