@@ -44,6 +44,7 @@ export default function App() {
       >
         <Text style={styles.buttonText}>Change color</Text>
       </TouchableOpacity>
+      <ButtonCounter />
     </View>
   );
 }
