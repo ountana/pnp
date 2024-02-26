@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import ButtonCounter from "./components/ButtonCounter";
 import {
   StyleSheet,
   Text,
