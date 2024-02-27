@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import ButtonCounter from "./components/ButtonCounter";
 import { StyleSheet, View } from "react-native";
+import ButtonCounter from "./components/ButtonCounter";
 
 export default function App() {
   return (
