@@ -11,7 +11,7 @@ import {
 } from "react-native";
 
 export default function App() {
-  // const [buttonColor, setButtonColor] = useState("#62a87c");
+  const [buttonColor, setButtonColor] = useState("#62a87c");
   const handleTextPress = () => {
     Alert.alert("You clicked on the text", "Press ok", [
       {
